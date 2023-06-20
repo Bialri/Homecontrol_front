@@ -1,29 +1,45 @@
-# homecontrolservfront
+# homecontrol_front
 
-This template should help get you started developing with Vue 3 in Vite.
+Client for IOT server [Homecontrol_fastapi](https://github.com/Bialri/homecontrol_fastapi)
 
-## Recommended IDE Setup
+## Setup for develop
+<p>In the root directory create .env file with following settings</p>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+```dotenv
+VITE_HOST=http(s)://your_host.com/
+```
+<p>Then you can run local server</p>
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Setup for deploy
 
-```sh
-npm run build
+<p>Configure the port of the host machine that you want to use</p>
+
+```yaml
+    ports:
+      - 'your_port:8080'
 ```
+
+# Avaliable features
+
+## Registration and login
+![image](./readme_img/loging.png)
+
+## Switch control
+![image](./readme_img/switch_conrol.png)
+<b>changing switch names</b>
+![image](./readme_img/switch_edit.png)
+
+## Scripts
+
+### Creating and editing scripts
+![image](./readme_img/script_creating.png)
+![image](./readme_img/scrtipt_editing.png)
+### Managing script actions
+![image](./readme_img/actions_managing.png)
+
+### Non-scheduled script execution is also available
